@@ -1,0 +1,70 @@
+/* בס"ד */
+
+/* #nameInput{
+    width: 400px;
+    height: 160px;
+    font-size: 300%;
+    margin-left: 40%;
+    text-align: center;
+} */
+#login{
+    position: fixed;
+    top:46%;
+    left: 56%;
+    width: 12%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#fullLogin{
+    position: fixed;
+    top:28%;
+    left: 34%;
+    width: 12%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.detInp{
+    width: 90%;
+}
+#doorimg{
+    margin-top: 2%;
+    margin-left: 20%;
+    background-image: url('/public/pic/logIn.PNG');
+    background-position: center;
+    width: 60%;
+    height: 850px;
+    background-size: cover;
+
+}
+#doorOpenImg{
+    margin-top: 2%;
+    margin-left: 20%;
+    background-image: url('/public/pic/openDoor.PNG');
+    background-position: center;
+    width: 60%;
+    height: 850px;
+    background-size: cover;
+
+}
+#id{
+    height: 30px;
+}
+#about{
+    position: fixed;
+    top:31%;
+    left: 66%;
+    width: 3%;
+    height:4% ;
+    background-color: rgba(0, 255, 255, 0);
+    border: none;
+}
+#log{
+    position: fixed;
+    top:70%;
+    left: 57%;
+    width: 8%;
+    height:2% ;
+    background-color: rgba(0, 255, 255, 0);
+    border: none;
+}

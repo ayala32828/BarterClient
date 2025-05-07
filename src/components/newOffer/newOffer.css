@@ -1,0 +1,401 @@
+/* בסיעתא דשמיא */
+
+/* עיצוב כללי לדף הוספת הצעה חדשה */
+.offer-header {
+  background-color: var(--bg-white);
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.back-link {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-light);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.back-link:hover {
+  color: var(--primary);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.logo-icon {
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+.offer-header h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: var(--text-dark);
+}
+
+.offer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.offer-form-card {
+  background-color: var(--bg-white);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.section-header p {
+  color: var(--text-light);
+}
+
+.highlight {
+  background: linear-gradient(to right, var(--primary), var(--accent-4));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-container label {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.form-input {
+  padding: 0.8rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  transition: var(--transition-fast);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.form-input.error {
+  border-color: var(--secondary);
+}
+
+.error-message {
+  color: var(--secondary);
+  font-size: 0.9rem;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.radio-option {
+  flex: 1;
+  position: relative;
+}
+
+.radio-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.radio-option label {
+  display: block;
+  padding: 0.8rem;
+  text-align: center;
+  background-color: var(--bg-light);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.radio-option input[type="radio"]:checked + label {
+  background-color: var(--primary);
+  color: white;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.primary-btn {
+  padding: 0.8rem 2rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-full);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.primary-btn:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.primary-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.secondary-btn {
+  padding: 0.8rem 2rem;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  border: none;
+  border-radius: var(--radius-full);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.secondary-btn:hover {
+  background-color: var(--bg-gray);
+}
+
+/* עיצוב טיפים */
+.offer-tips {
+  background-color: var(--bg-light);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  height: fit-content;
+}
+
+.tips-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.tips-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--text-dark);
+}
+
+.tips-list {
+  padding-right: 1.5rem;
+  margin: 0;
+}
+
+.tips-list li {
+  margin-bottom: 0.8rem;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+/* עיצוב דיאלוג הצלחה */
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.success-dialog {
+  background-color: var(--bg-white);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.success-icon {
+  width: 70px;
+  height: 70px;
+  background-color: var(--accent-2);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 1.5rem;
+}
+
+.success-dialog h2 {
+  font-size: 1.8rem;
+  color: var(--text-dark);
+  margin: 0 0 1rem;
+}
+
+.success-dialog p {
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.success-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* עיצוב רספונסיבי */
+@media (max-width: 900px) {
+  .offer-container {
+      grid-template-columns: 1fr;
+  }
+  
+  .offer-tips {
+      margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .offer-header h1 {
+      font-size: 1.5rem;
+  }
+  
+  .back-link {
+      position: static;
+      transform: none;
+      margin-bottom: 1rem;
+      justify-content: center;
+  }
+  
+  .offer-header {
+      padding: 1.5rem 1rem;
+  }
+  
+  .header-content {
+      flex-direction: column;
+  }
+  
+  .offer-container {
+      padding: 0 1rem;
+  }
+  
+  .radio-group {
+      flex-direction: column;
+  }
+  
+  .success-actions {
+      flex-direction: column;
+  }
+}
+
+/* אנימציות */
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.05);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+.primary-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.primary-btn:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+.primary-btn:hover:after {
+  transform: translateX(100%);
+}
+
+/* תמיכה בערכות צבעים */
+.high-contrast .offer-form-card,
+.high-contrast .offer-tips {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.high-contrast .form-input {
+  background-color: #000;
+  color: #fff;
+  border-color: #fff;
+}
+
+.high-contrast .radio-option label {
+  background-color: #333;
+  color: #fff;
+}
+
+.high-contrast .radio-option input[type="radio"]:checked + label {
+  background-color: #fff;
+  color: #000;
+}
+
+.large-text .offer-container {
+  font-size: 1.2rem;
+}
+
+.large-text .form-input {
+  font-size: 1.2rem;
+}
+
+.large-text .primary-btn,
+.large-text .secondary-btn {
+  font-size: 1.2rem;
+}

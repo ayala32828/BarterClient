@@ -1,0 +1,19 @@
+/* בס"ד*/
+
+#allLink{
+    display: flex;
+    justify-content: space-around;
+    /* background-color: rgb(166, 104, 180); */
+   /* background-color: #fba1a197  ; */
+   background-color: rgba(113,159,157);
+   flex-wrap: wrap;
+   margin-left: 100px;
+   margin-right: 100px;
+   /* עדיף לשנות לאחוזים */
+    height: 60px;
+    align-items: center;
+    font-size: x-large;
+}
+.link{
+    color: white;
+}

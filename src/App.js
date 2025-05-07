@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
 
+import { Login } from './components/login/login';
+import { GetMyOffers } from './components/myOffers/myOffers';
+import { Navigation } from './components/links/navigation/navig';
+import { NewOffer } from './components/newOffer/newOffer';
+import { Routing } from './components/links/rout/routing';
+import { Run } from './components/subComp/running/run';
+// import {Pap}
+
+
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Run/>
+      <Navigation/>
+      <Routing/>
+      {/* <CollapsibleTable/> */}
     </div>
   );
 }
